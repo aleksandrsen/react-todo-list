@@ -1,0 +1,15 @@
+.item-add-panel {
+    flex-basis: 40%;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-add-panel input {
+    width: 80%;
+    border-radius: 10px;
+}
+

@@ -1,0 +1,8 @@
+.filter-items {
+    display: flex;
+    margin-left: 15px;
+}
+
+.btn + .btn {
+    margin-left: 3px;
+}

@@ -1,0 +1,10 @@
+.todo-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.no-items {
+    font-size: 58px;
+    margin-top: 40px;
+    text-align: center;
+}

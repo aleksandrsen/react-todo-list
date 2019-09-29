@@ -1,0 +1,17 @@
+
+.search-panel {
+    width: 55%;
+}
+
+.search-panel input {
+    background-color: lightgray;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+
+.search-panel input:focus {
+    outline: none;
+}
+
+

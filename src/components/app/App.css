@@ -1,0 +1,28 @@
+.app {
+    background-color: #002b36;
+    color: #fff;
+    min-height: 100vh;
+}
+
+header {
+    padding: 20px 20px;
+    color: lightskyblue;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.controls {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    flex-basis: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
