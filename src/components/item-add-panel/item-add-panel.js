@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
-
+import React, {Component} from 'react';
 import './item-add-panel.css'
-
 
 export default class ItemAddPanel extends Component {
 
@@ -19,29 +17,24 @@ export default class ItemAddPanel extends Component {
 
     onChange = (e) => {
         this.setState({
-                value: e.target.value
-            })
+            value: e.target.value
+        })
     };
-
-
 
     render() {
 
         return (
-            <div className = 'item-add-panel'>
-                <form onSubmit = { this.addItem }>
+            <div className='item-add-panel'>
+                <form onSubmit={this.addItem}>
                     <input type="text"
-                           placeholder = 'Type to add'
-                           className = "form-control"
-                           onChange = { this.onChange }
-                           value = { this.state.value }
+                           placeholder='Type to add'
+                           className="form-control"
+                           onChange={this.onChange}
+                           value={this.state.value}
                     />
-                    <button className = 'btn btn-info add-item'>Add item</button>
+                    <button className='btn btn-info add-item'>Add item</button>
                 </form>
             </div>
         )
     }
 }
-
-
-

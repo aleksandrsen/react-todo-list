@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
-
 import './App.css'
-
-
 import SearchPanel from '../search-panel'
 import FilterItems from '../filter-items'
 import SortItems from '../sort-items'
@@ -10,22 +7,19 @@ import TodoList from '../todo-list'
 import ItemAddPanel from '../item-add-panel'
 import ItemsStatus from '../items-status'
 
-
-
-
 export default class App extends Component {
 
     startId = 100;
 
     state = {
-      todos: [
-          this.createItem('Drink Coffee'),
-          this.createItem('Make app'),
-          this.createItem('Go to work'),
-          this.createItem('Buy some fruits')
-      ],
-      term: '',
-      filter: 'all'
+        todos: [
+            this.createItem('Drink Coffee'),
+            this.createItem('Make app'),
+            this.createItem('Go to work'),
+            this.createItem('Buy some fruits')
+        ],
+        term: '',
+        filter: 'all'
     };
 
     // Search panel
@@ -62,12 +56,12 @@ export default class App extends Component {
     };
 
     createItem(label) {
-      return {
-          label,
-          important: false,
-          done: false,
-          id: this.startId++
-      }
+        return {
+            label,
+            important: false,
+            done: false,
+            id: this.startId++
+        }
     };
 
     // Filter items
@@ -83,7 +77,8 @@ export default class App extends Component {
                 return items.filter((item) => !item.done);
             case 'done':
                 return items.filter((item) => item.done);
-            default: return items;
+            default:
+                return items;
         }
     };
 
@@ -102,7 +97,6 @@ export default class App extends Component {
             }
         });
     };
-
 
     // Todo lit item footer
 
@@ -145,40 +139,35 @@ export default class App extends Component {
 
 
     render() {
-
-        const { todos, term, filter } = this.state;
-
-        // Done and all items
+        const {todos, term, filter} = this.state;
         let doneItems = this.getDoneCount();
         let allItems = this.state.todos.length;
 
-
         const visibleItems = this.filter(this.search(todos, term), filter);
 
-
         return (
-            <div className = 'app'>
+            <div className='app'>
                 <header>
-                    <SearchPanel onSearchChange = { this.onSearchChange }/>
-                    <ItemsStatus done = { doneItems } all = { allItems }/>
+                    <SearchPanel onSearchChange={this.onSearchChange}/>
+                    <ItemsStatus done={doneItems} all={allItems}/>
                 </header>
                 <main>
                     <div className="container-fluid">
-                        <div className = 'controls'>
-                            <ItemAddPanel addItem = {this.addItem}/>
-                            <div className = 'right'>
+                        <div className='controls'>
+                            <ItemAddPanel addItem={this.addItem}/>
+                            <div className='right'>
                                 <SortItems/>
                                 <FilterItems
-                                    filter = { filter }
-                                    onFilterChange = { this.onFilterChange }/>
+                                    filter={filter}
+                                    onFilterChange={this.onFilterChange}/>
                             </div>
                         </div>
                         <TodoList
-                            todos = { visibleItems }
-                            onDeleteItem = {this.onDeleteItem}
-                            onToogleImportant = { this.onToogleImportant }
-                            onToogleDone = { this.onToogleDone }
-                            onEditItem = { this.onEditItem }
+                            todos={visibleItems}
+                            onDeleteItem={this.onDeleteItem}
+                            onToogleImportant={this.onToogleImportant}
+                            onToogleDone={this.onToogleDone}
+                            onEditItem={this.onEditItem}
                         />
                     </div>
                 </main>
@@ -186,6 +175,3 @@ export default class App extends Component {
         )
     }
 }
-
-
-
