@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0",
-    "react-input-number": "^5.0.14",
-    "react-input-slider": "^5.0.14"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-input-number": "^5.0.18",
+    "react-input-slider": "^5.1.4",
+    "react-scripts": "3.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -31,8 +31,8 @@
     ]
   },
   "devDependencies": {
-    "@emotion/core": "^10.0.10",
-    "@xkit/popover": "^0.1.10",
+    "@emotion/core": "^10.0.27",
+    "@xkit/popover": "^0.1.20",
     "color-functions": "^3.0.1"
   }
 }
